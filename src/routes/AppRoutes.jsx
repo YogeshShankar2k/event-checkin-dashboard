@@ -14,6 +14,8 @@ import CheckIn from "../pages/checkin/CheckIn";
 import Analytics from "../pages/analytics/Analytics";
 
 import NotFound from "../pages/NotFound";
+import AddBooth from "../pages/booths/AddBooth";
+import EditBooth from "../pages/booths/EditBooth";
 
 const AppRoutes = () => {
     return (
@@ -33,6 +35,11 @@ const AppRoutes = () => {
                 <Route path="/analytics" element={<Analytics />} />
 
                 <Route path="*" element={<NotFound />} />
+                <Route path="/booths" element={<BoothList />} />
+
+                <Route path="/booths/add" element={<AddBooth />} />
+
+                <Route path="/booths/edit/:id" element={<EditBooth />} />
             </Routes>
         </BrowserRouter>
     );

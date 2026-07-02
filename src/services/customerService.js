@@ -11,3 +11,11 @@ export const updateCustomer = (id, data) =>
 
 export const deleteCustomer = (id) =>
     api.delete(`/customers/${id}`);
+
+export const updateCustomerStatus = (id, payload) =>
+    api.patch(`/customers/${id}`, payload);
+
+export const assignBooth = (id, boothId) =>
+    api.patch(`/customers/${id}`, {
+        boothId,
+    });

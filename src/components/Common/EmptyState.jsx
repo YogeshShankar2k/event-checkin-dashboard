@@ -1,5 +1,21 @@
+import { Box, Typography } from "@mui/material";
+
 const EmptyState = () => {
-    return <h3>No Data Found</h3>;
+    return (
+        <Box
+            sx={{
+                textAlign: "center",
+                mt: 8,
+            }}
+        >
+            <Typography
+                variant="h5"
+                color="gray"
+            >
+                No Customers Found
+            </Typography>
+        </Box>
+    );
 };
 
 export default EmptyState;

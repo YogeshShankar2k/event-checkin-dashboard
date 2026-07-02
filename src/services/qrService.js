@@ -1,10 +1,12 @@
 import api from "../api/axios";
 
-export const checkInCustomer = (id, data) =>
-    api.patch(`/customers/${id}`, data);
+export const updateCustomerStatus = (id, payload) =>
+    api.patch(`/customers/${id}`, payload);
 
-export const checkOutCustomer = (id, data) =>
-    api.patch(`/customers/${id}`, data);
+export const assignCustomerBooth = (id, boothId) =>
+    api.patch(`/customers/${id}`, {
+        boothId,
+    });
 
-export const assignBooth = (id, data) =>
-    api.patch(`/customers/${id}`, data);
+export const addActivity = (activity) =>
+    api.post("/activities", activity);
