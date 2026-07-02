@@ -8,9 +8,7 @@ import EditCustomer from "../pages/customers/EditCustomer";
 import CustomerDetails from "../pages/customers/CustomerDetails";
 
 import BoothList from "../pages/booths/BoothList";
-
 import CheckIn from "../pages/checkin/CheckIn";
-
 import Analytics from "../pages/analytics/Analytics";
 
 import NotFound from "../pages/NotFound";
@@ -32,9 +30,9 @@ const AppRoutes = () => {
 
                 <Route path="/booths" element={<ProtectedRoute><BoothList /></ProtectedRoute>} />
 
-                <Route path="/checkin" element={<CheckIn />} />
+                <Route path="/checkin" element={<ProtectedRoute><CheckIn /></ProtectedRoute>} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/analytics" element={<Analytics />} />
+                <Route path="/analytics" element={<ProtectedRoute><Analytics /></ProtectedRoute>} />
 
                 <Route path="*" element={<NotFound />} />
                 <Route path="/booths" element={<ProtectedRoute><BoothList /></ProtectedRoute>} />

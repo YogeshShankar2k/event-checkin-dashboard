@@ -2,8 +2,8 @@
   "customers": [
     {
       "id": "1",
-      "name": "John Smith",
-      "email": "john@gmail.com",
+      "name": "Yogesh Shankar",
+      "email": "yogesh@gmail.com",
       "phone": "9876543210",
       "company": "Google",
       "ticketType": "VIP",
@@ -14,8 +14,8 @@
     },
     {
       "id": "3",
-      "name": "David Lee",
-      "email": "david@gmail.com",
+      "name": "Sharan kumar",
+      "email": "sharan@gmail.com",
       "phone": "9988776655",
       "company": "Amazon",
       "ticketType": "VIP",
@@ -25,8 +25,8 @@
       "qrCode": "CUS003"
     },
     {
-      "name": "Yogesh S",
-      "email": "yogeshshankar@colive.com",
+      "name": "Vignesh",
+      "email": "vignesh@gmail.com",
       "phone": "8681099866",
       "company": "Colife Advisory Pvt LTD,Banglore",
       "ticketType": "VIP",
@@ -41,8 +41,8 @@
     {
       "id": 1,
       "name": "Yogesh Shankar",
-      "email": "admin@test.com",
-      "password": "123456"
+      "email": "admin@sumathra.com",
+      "password": "654321"
     }
   ],
   "booths": [
@@ -72,13 +72,13 @@
     {
       "id": "1",
       "type": "Check-In",
-      "customer": "John Smith",
+      "customer": "Yogesh",
       "time": "09:30 AM"
     },
     {
       "id": "2",
       "type": "Check-Out",
-      "customer": "David Lee",
+      "customer": "Check out",
       "time": "11:10 AM"
     }
   ]

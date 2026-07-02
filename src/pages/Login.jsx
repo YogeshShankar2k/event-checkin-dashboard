@@ -22,16 +22,12 @@ const Login = () => {
             const res = await api.get(
                 `/users?email=${email}&password=${password}`
             );
-
             if (res.data.length === 0) {
                 toast.error("Invalid Credentials");
                 return;
             }
-
             localStorage.setItem("user", JSON.stringify(res.data[0]));
-
             toast.success(`Welcome ${res.data[0].name}`);
-
             navigate("/");
         } catch {
             toast.error("Login Failed");
@@ -51,14 +47,12 @@ const Login = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
-
                     <TextField
                         label="Password"
                         type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
-
                     <Button
                         variant="contained"
                         onClick={login}

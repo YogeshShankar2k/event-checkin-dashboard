@@ -53,27 +53,22 @@ const BoothCard = ({
                 height: "100%",
             }}
         >
-
             <CardContent>
-
                 <Stack
                     direction="row"
                     justifyContent="space-between"
                     alignItems="center"
                 >
-
                     <Typography
                         variant="h6"
                         fontWeight="bold"
                     >
                         {booth.name}
                     </Typography>
-
                     <Chip
                         label={booth.status}
                         color={getColor()}
                     />
-
                 </Stack>
 
                 <Stack
@@ -82,16 +77,11 @@ const BoothCard = ({
                     mt={3}
                     alignItems="center"
                 >
-
                     <StoreIcon />
-
                     <Typography>
-
                         Capacity :
                         <b> {booth.capacity}</b>
-
                     </Typography>
-
                 </Stack>
 
                 <Stack
@@ -100,16 +90,11 @@ const BoothCard = ({
                     mt={2}
                     alignItems="center"
                 >
-
                     <PeopleIcon />
-
                     <Typography>
-
                         Occupied :
                         <b> {booth.occupied}</b>
-
                     </Typography>
-
                 </Stack>
 
                 <LinearProgress
@@ -126,9 +111,7 @@ const BoothCard = ({
                     mt={1}
                     color="text.secondary"
                 >
-
                     {percentage}% Occupied
-
                 </Typography>
 
                 <Stack
@@ -137,37 +120,25 @@ const BoothCard = ({
                     justifyContent="flex-end"
                     mt={3}
                 >
-
                     <Tooltip title="Edit">
-
                         <IconButton
                             color="warning"
                             onClick={() => onEdit(booth.id)}
                         >
-
                             <EditIcon />
-
                         </IconButton>
-
                     </Tooltip>
 
                     <Tooltip title="Delete">
-
                         <IconButton
                             color="error"
                             onClick={() => onDelete(booth.id)}
                         >
-
                             <DeleteIcon />
-
                         </IconButton>
-
                     </Tooltip>
-
                 </Stack>
-
             </CardContent>
-
         </Card>
 
     );

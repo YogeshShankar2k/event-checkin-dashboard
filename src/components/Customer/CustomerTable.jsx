@@ -47,9 +47,7 @@ const CustomerTable = ({ customers, onDelete }) => {
             }}
         >
             <Table>
-
                 <TableHead>
-
                     <TableRow
                         sx={{
                             background: "#1976d2",
@@ -58,15 +56,12 @@ const CustomerTable = ({ customers, onDelete }) => {
                         <TableCell sx={{ color: "#fff", fontWeight: 700 }}>
                             Name
                         </TableCell>
-
                         <TableCell sx={{ color: "#fff", fontWeight: 700 }}>
                             Email
                         </TableCell>
-
                         <TableCell sx={{ color: "#fff", fontWeight: 700 }}>
                             Phone
                         </TableCell>
-
                         <TableCell sx={{ color: "#fff", fontWeight: 700 }}>
                             Company
                         </TableCell>
@@ -78,18 +73,14 @@ const CustomerTable = ({ customers, onDelete }) => {
                         <TableCell sx={{ color: "#fff", fontWeight: 700 }}>
                             Status
                         </TableCell>
-
                         <TableCell
                             align="center"
                             sx={{ color: "#fff", fontWeight: 700 }}
                         >
                             Actions
                         </TableCell>
-
                     </TableRow>
-
                 </TableHead>
-
                 <TableBody>
 
                     {customers.map((customer) => (
@@ -98,7 +89,6 @@ const CustomerTable = ({ customers, onDelete }) => {
                             hover
                             key={customer.id}
                         >
-
                             <TableCell>
                                 <Typography fontWeight="600">
                                     {customer.name}
@@ -112,23 +102,18 @@ const CustomerTable = ({ customers, onDelete }) => {
                             <TableCell>
                                 {customer.phone}
                             </TableCell>
-
                             <TableCell>
                                 {customer.company}
                             </TableCell>
-
                             <TableCell>
                                 {customer.ticketType}
                             </TableCell>
-
                             <TableCell>
-
                                 <Chip
                                     label={customer.status}
                                     color={getStatusColor(customer.status)}
                                     size="small"
                                 />
-
                             </TableCell>
 
                             <TableCell align="center">
@@ -138,9 +123,7 @@ const CustomerTable = ({ customers, onDelete }) => {
                                     spacing={1}
                                     justifyContent="center"
                                 >
-
                                     <Tooltip title="View">
-
                                         <IconButton
                                             color="primary"
                                             onClick={() =>
@@ -149,9 +132,7 @@ const CustomerTable = ({ customers, onDelete }) => {
                                         >
                                             <VisibilityIcon />
                                         </IconButton>
-
                                     </Tooltip>
-
                                     <Tooltip title="Edit">
 
                                         <IconButton
@@ -164,22 +145,16 @@ const CustomerTable = ({ customers, onDelete }) => {
                                         </IconButton>
 
                                     </Tooltip>
-
                                     <Tooltip title="Delete">
-
                                         <IconButton
                                             color="error"
                                             onClick={() => onDelete(customer.id)}
                                         >
                                             <DeleteIcon />
                                         </IconButton>
-
                                     </Tooltip>
-
                                 </Stack>
-
                             </TableCell>
-
                         </TableRow>
 
                     ))}

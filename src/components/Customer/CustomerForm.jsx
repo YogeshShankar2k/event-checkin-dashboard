@@ -8,9 +8,7 @@ import {
 } from "@mui/material";
 
 import { useForm, Controller } from "react-hook-form";
-
 import { yupResolver } from "@hookform/resolvers/yup";
-
 import { customerSchema } from "../../utils/validation";
 
 const CustomerForm = ({
@@ -144,7 +142,6 @@ const CustomerForm = ({
                             )}
                         />
                     </Grid>
-
                 </Grid>
 
                 <Stack

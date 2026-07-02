@@ -1,15 +1,10 @@
 import { Pie } from "react-chartjs-2";
 
 import {
-
     Chart,
-
     ArcElement,
-
     Tooltip,
-
     Legend
-
 } from "chart.js";
 
 import { Paper } from "@mui/material";
@@ -35,9 +30,7 @@ const StatusChart = ({ customers }) => {
     ).length;
 
     const data = {
-
         labels: ["Checked-In", "Pending", "Checked-Out"],
-
         datasets: [
 
             {
@@ -45,31 +38,20 @@ const StatusChart = ({ customers }) => {
                 data: [checked, pending, checkout]
 
             }
-
         ]
-
     };
 
     return (
 
         <Paper
-
             sx={{
-
                 p: 3,
-
                 borderRadius: 3
-
             }}
-
         >
-
             <Pie data={data} />
-
         </Paper>
-
     )
-
 }
 
 export default StatusChart

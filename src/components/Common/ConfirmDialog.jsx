@@ -30,13 +30,11 @@ const ConfirmDialog = ({
             </DialogContent>
 
             <DialogActions>
-
                 <Button
                     onClick={onClose}
                 >
                     Cancel
                 </Button>
-
                 <Button
                     variant="contained"
                     color="error"
@@ -44,9 +42,7 @@ const ConfirmDialog = ({
                 >
                     Delete
                 </Button>
-
             </DialogActions>
-
         </Dialog>
     );
 };

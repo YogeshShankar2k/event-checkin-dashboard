@@ -1,11 +1,7 @@
 import { useEffect, useState } from "react";
-
 import { useParams, useNavigate } from "react-router-dom";
-
 import Layout from "../../components/Common/Layout";
-
 import CustomerForm from "../../components/Customer/CustomerForm";
-
 import Loader from "../../components/Common/Loader";
 
 import {
@@ -16,11 +12,8 @@ import {
 import { toast } from "react-toastify";
 
 const EditCustomer = () => {
-
   const { id } = useParams();
-
   const navigate = useNavigate();
-
   const [customer, setCustomer] = useState(null);
 
   useEffect(() => {
@@ -38,20 +31,14 @@ const EditCustomer = () => {
 
   const onSubmit = async (data) => {
     try {
-
       await updateCustomer(id, {
         ...customer,
         ...data,
       });
-
       toast.success("Customer Updated Successfully");
-
       navigate("/customers");
-
     } catch {
-
       toast.error("Update Failed");
-
     }
   };
 
@@ -60,13 +47,11 @@ const EditCustomer = () => {
   return (
 
     <Layout>
-
       <CustomerForm
         defaultValues={customer}
         onSubmit={onSubmit}
         submitText="Update Customer"
       />
-
     </Layout>
 
   );

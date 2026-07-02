@@ -28,15 +28,10 @@ const CustomerList = () => {
 
   const navigate = useNavigate();
   const [dialogOpen, setDialogOpen] = useState(false);
-
   const [selectedId, setSelectedId] = useState(null);
-
   const [customers, setCustomers] = useState([]);
-
   const [filteredCustomers, setFilteredCustomers] = useState([]);
-
   const [loading, setLoading] = useState(true);
-
   const [search, setSearch] = useState("");
 
   useEffect(() => {
@@ -50,21 +45,14 @@ const CustomerList = () => {
     try {
 
       const res = await getCustomers();
-
       setCustomers(res.data);
-
       setFilteredCustomers(res.data);
 
     } catch (err) {
-
       console.log(err);
-
       toast.error("Failed to fetch customers");
-
     } finally {
-
       setLoading(false);
-
     }
 
   };
@@ -74,13 +62,10 @@ const CustomerList = () => {
     setSearch(value);
 
     const result = customers.filter((customer) =>
-
       customer.name.toLowerCase().includes(value.toLowerCase()) ||
 
       customer.email.toLowerCase().includes(value.toLowerCase()) ||
-
       customer.company.toLowerCase().includes(value.toLowerCase())
-
     );
 
     setFilteredCustomers(result);
@@ -94,34 +79,21 @@ const CustomerList = () => {
 
   const confirmDelete = async () => {
     try {
-
       await deleteCustomer(selectedId);
-
       setCustomers((prev) =>
         prev.filter((c) => c.id !== selectedId)
       );
-
       setFilteredCustomers((prev) =>
         prev.filter((c) => c.id !== selectedId)
       );
-
       toast.success("Customer deleted");
-
     } catch {
-
       toast.error("Delete failed");
-
     } finally {
-
       setDialogOpen(false);
-
       setSelectedId(null);
-
     }
   };
-
-
-
   if (loading) return <Loader />;
 
   return (
@@ -134,14 +106,12 @@ const CustomerList = () => {
         alignItems="center"
         mb={3}
       >
-
         <Typography
           variant="h4"
           fontWeight="bold"
         >
           Customers
         </Typography>
-
         <Button
           variant="contained"
           startIcon={<AddIcon />}
@@ -153,7 +123,6 @@ const CustomerList = () => {
         </Button>
 
       </Box>
-
       <TextField
         fullWidth
         placeholder="Search by Name / Email / Company..."
@@ -165,18 +134,14 @@ const CustomerList = () => {
           mb: 3,
         }}
       />
-
       {
-
         filteredCustomers.length === 0 ?
-
           <EmptyState />
           :
           <CustomerTable
             customers={filteredCustomers}
             onDelete={handleDelete}
           />
-
       }
       <ConfirmDialog
         open={dialogOpen}
@@ -186,7 +151,6 @@ const CustomerList = () => {
         message="Are you sure you want to delete this customer?"
       />
     </Layout>
-
   );
 
 };
