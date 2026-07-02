@@ -37,6 +37,14 @@
       "qrCode": "CUS-1782910092580"
     }
   ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Yogesh Shankar",
+      "email": "admin@test.com",
+      "password": "123456"
+    }
+  ],
   "booths": [
     {
       "id": "1",
