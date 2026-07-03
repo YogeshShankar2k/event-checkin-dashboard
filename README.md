@@ -16,7 +16,7 @@
 - Customer Management (CRUD)
 - Booth Management
 - Customer Check-In / Check-Out
-- QR Code Generation
+- QR Code
 - Analytics
 - Activity Tracking
 - Responsive UI
