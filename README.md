@@ -2,27 +2,58 @@
 
 ## Tech Stack
 
-- React
+- ReactJS
 - Vite
 - Material UI
+- React Router DOM
 - Axios
 - JSON Server
-- React Router
+
+## Features
+
+- Login Authentication
+- Dashboard
+- Customer Management (CRUD)
+- Booth Management
+- Customer Check-In / Check-Out
+- QR Code Generation
+- Analytics
+- Activity Tracking
+- Responsive UI
+
+## Login Credentials
+
+Email:
+admin@sumathra.com
+
+Password:
+654321
+
+> Currently the application supports one mock admin user. More users can be added in `db.json`.
 
 ## Run Locally
 
+```bash
 npm install
-
 npm run dev
+```
 
-## Mock API
+Run JSON Server
 
-JSON Server hosted on Render
+```bash
+cd server
+npm install
+npm start
+```
 
-## Live URL
+## Live Application
 
 https://event-checkin-dashboard.vercel.app/
 
-## GitHub
+## Mock API
+
+https://event-checkin-dashboard-api.onrender.com/
+
+## GitHub Repository
 
 https://github.com/YogeshShankar2k/event-checkin-dashboard
